@@ -223,9 +223,9 @@ fof(conj, conjecture, (exists X: p(X))).
       <h2>✅ Practical checklist to attach to a submission</h2>
       <ul class="check">
         <li class="check-item"><strong>Instance file</strong> (in community format)</li>
+        <li class="check-item"><strong>Description</strong>, a brief description what the benchmarks is about, i.e., what it models, or even a link to paper or some other medium with more details</li>
         <li class="check-item"><strong>Solver command</strong> used</li>
         <li class="check-item"><strong>Timeout & machine</strong></li>
-        <li class="check-item"><strong>Observed result</strong> (SAT/UNSAT/UNKNOWN/CRASH)</li>
         <li class="check-item"><strong>Metadata</strong> (origin, license)</li>
         <li class="check-item"><strong>Optional</strong> proof/model/logs
         </li>
@@ -253,7 +253,7 @@ fof(conj, conjecture, (exists X: p(X))).
       <h2>✍️ Example submission template (text you can paste)</h2>
       <pre>
 Title: Short descriptive title
-Origin: (where instance came from)
+Description: (textual description, url)
 Format: CNF / WCNF / OPB / SMT-LIB / TPTP
 Filename: my-instance.cnf
 Solver: name + version
