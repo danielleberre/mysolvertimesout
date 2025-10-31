@@ -177,7 +177,7 @@
 
       <h3 id="sat">🔣 SAT (Boolean satisfiability)</h3><p class="note">Why it helps: SAT is a core technology used in scheduling, security, hardware and more. Hard cases move the whole field forward!</p>
       <p>Meet the state-of-the-art SAT solvers at the <a href="http://satcompetition.org/">SAT competition</a>.</p>
-      <p><strong>Clear statement:</strong> For SAT, submit instances in <code>DIMACS CNF</code> format (plain <code>.cnf</code>). Provide the exact file you fed the solver, your solver command line, timeout, and the solver's result (SAT/UNSAT/TIMEOUT/CRASH).</p>
+      <p><strong>Submission:</strong> For SAT, submit instances in <code>DIMACS CNF</code> format (plain <code>.cnf</code>). Provide the exact file you fed the solver, your solver command line, timeout, and the solver's result (SAT/UNSAT/TIMEOUT/CRASH).</p>
       <pre>c Example comment lines start with 'c'
 p cnf 6 9
 1 -3 0
@@ -186,7 +186,7 @@ p cnf 6 9
 
       <h3 id="pbo">📊 PBO (Pseudo-Boolean Optimization)</h3><p class="note">Why it helps: Optimization problems show where solvers struggle to find the best solution, not just any solution.</p>
       <p>Meet the state-of-the-art PBO solvers at the <a href="https://www.cril.univ-artois.fr/PB25/">PB competition</a>.</p>
-      <p><strong>Clear statement:</strong> For PBO, provide the instance in the standard <code>.opb</code> (OPB) format or other community-accepted formats. Include the optimization objective and any assumptions used. State the expected optimality (if known) or that the optimum is unknown.</p>
+      <p><strong>Submission:</strong> For PBO, provide the instance in the standard <code>.opb</code> (OPB) format or other community-accepted formats. Include the optimization objective and any assumptions used. State the expected optimality (if known) or that the optimum is unknown.</p>
       <pre>* #variable= 5 #constraint= 3
 +1 x1 -2 x2 +3 x3 <= 4;
 min: 2 x1 + 3 x2 + 1 x3;
@@ -194,7 +194,7 @@ min: 2 x1 + 3 x2 + 1 x3;
 
       <h3 id="maxsat">🎯 MAXSAT</h3><p class="note">Why it helps: MAXSAT benchmarks highlight how solvers balance many conflicting goals.</p>
       <p>Meet the state-of-the-art MAXSAT solvers at the <a href="https://maxsat-evaluations.github.io/2024/">MAXSAT evaluation</a>.</p>
-      <p><strong>Clear statement:</strong> For (Weighted) MAXSAT, use <code>WCNF</code> or <code>CNF</code> with soft/hard annotations. Provide weights, whether the instance is partial or weighted, and any target optimum if known.</p>
+      <p><strong>Submission:</strong> For (Weighted) MAXSAT, use <code>WCNF</code> or <code>CNF</code> with soft/hard annotations. Provide weights, whether the instance is partial or weighted, and any target optimum if known.</p>
       <pre>p wcnf 4 6 10
 1 1 -3 0
 10 2 -4 0  (weight 10 soft clause)
@@ -202,11 +202,11 @@ min: 2 x1 + 3 x2 + 1 x3;
 
       <h3 id="sharpsat">🧮 #SAT (Model counting / Weighted model counting)</h3><p class="note">Why it helps: Counting solutions pushes reasoning into probabilistic and AI applications.</p>
       <p>Meet the state-of-the-art model counters at the <a href="https://mccompetition.org">Model Counting competition</a>.</p>
-      <p><strong>Clear statement:</strong> For #SAT, submit the CNF instance, and indicate whether the count should be exact or approximate and whether it's weighted. If available, supply the known count or bounds, and the intended variable set to count over.</p>
+      <p><strong>Submission:</strong> For #SAT, submit the CNF instance, and indicate whether the count should be exact or approximate and whether it's weighted. If available, supply the known count or bounds, and the intended variable set to count over.</p>
 
       <h3 id="smt">⚙️ SMT (Satisfiability Modulo Theories)</h3><p class="note">Why it helps: SMT benchmarks test reasoning with arithmetic, bitvectors, arrays — essential in software and hardware verification.</p>
       <p>Meet the state-of-the-art SMT solvers at the <a href="https://smt-comp.github.io/2025/">SMT competition</a>.</p>
-      <p><strong>Clear statement:</strong> For SMT, use <code>SMT-LIB v2</code> format (<code>.smt2</code>). Declare logic (<code>QF_BV</code>, <code>QF_UF</code>, <code>QF_LIA</code>, etc.) and provide the exact file and invocation. If the formula is intended for satisfiability or for producing a model/proof, state that explicitly.</p>
+      <p><strong>Submission:</strong> For SMT, use <code>SMT-LIB v2</code> format (<code>.smt2</code>). Declare logic (<code>QF_BV</code>, <code>QF_UF</code>, <code>QF_LIA</code>, etc.) and provide the exact file and invocation. If the formula is intended for satisfiability or for producing a model/proof, state that explicitly.</p>
       <pre>; example.smt2
 (set-logic QF_BV)
 (declare-fun x () (_ BitVec 32))
@@ -217,7 +217,7 @@ min: 2 x1 + 3 x2 + 1 x3;
 
       <h3 id="atp">📐 ATP (Automated Theorem Proving)</h3><p class="note">Why it helps: Testing ATP systems keeps mathematical reasoning systems trustworthy and ambitious.</p>
       <p>Meet the state-of-the-art ATP systems at the <a href="https://tptp.org/CASC/">CADE ATP System Competition (CASC)</a>.</p>
-      <p><strong>Clear statement:</strong> For ATP (first-order logic, higher-order logic), use the <code>TPTP</code> format (.p, .tptp) and clearly label conjectures, axioms, and theory language (FOF, CNF, THF). Indicate expected result (theorem / countersatisfiable) and supply any existing proofs/traces if available.</p>
+      <p><strong>Submission:</strong> For ATP (first-order logic, higher-order logic), use the <code>TPTP</code> format (.p, .tptp) and clearly label conjectures, axioms, and theory language (FOF, CNF, THF). Indicate expected result (theorem / countersatisfiable) and supply any existing proofs/traces if available.</p>
       <pre>% File: example.p
 fof(ax1, axiom, (p(a))).
 fof(conj, conjecture, (exists X: p(X))).
@@ -225,11 +225,11 @@ fof(conj, conjecture, (exists X: p(X))).
 
       <h3 id="minizinc">MiniZinc</h3><p class="note">Why it helps: push forward the boundaries in solving discrete optimisation problems.</p>
       <p>Meet the state-of-the-art MiniZinc at the <a href="https://www.minizinc.org">MiniZinc Challenge</a>.</p>
-      <p><strong>Clear statement:</strong> TODO.</p>
+      <p><strong>Submission:</strong> TODO.</p>
 
       <h3 id="minizinc">XCSP3</h3><p class="note">Why it helps: push forward the boundaries in solving discrete decision and optimisation problems.</p>
       <p>Meet the state-of-the-art XCSP solvers at the <a href="https://xcsp.org/competitions/">XCSP competition</a>.</p>
-      <p><strong>Clear statement:</strong> TODO.</p>
+      <p><strong>Submission:</strong> TODO.</p>
 
     </section>
 
@@ -280,17 +280,13 @@ Artifacts: solver.log (attached), model.witness (if found)
     </section>
 
     <section class="card">
-      <h2>💛 Final, clear encouragement</h2>
+      <h2>💛 All contributions are welcome</h2>
       <p>We know contributing a benchmark takes a bit of effort — and we deeply appreciate it. Your contribution, no matter how small, helps build systems that solve problems more reliably for everyone. Thank you for being part of a kind and collaborative community! 🌟</p>
       <div class="cta">
         <a class="btn" href="#" onclick="alert('Copy the example submission template from the page to your clipboard.')">Copy template</a>
         <a class="btn" href="#" onclick="alert('Consider opening an issue on your solver\'s GitHub and attaching the instance.')">How to submit</a>
       </div>
     </section>
-
-    <footer>
-      <div class="note">This page is a suggested submission guide. If you're contributing to a specific competition or repository, follow their precise rules and formats.</div>
-    </footer>
 
     <section class="card">
       <h2>🤝 A friendly note for solver developers</h2>
@@ -301,7 +297,15 @@ Timeout reached! 😅 This instance is a real thinker.
 Please consider contributing it to improve automated reasoning:
 <strong><a href="https://mysolvertimesout.org" style="color:var(--secondary);text-decoration:underline">mysolvertimesout.org</a></strong>
       </pre>
+      <p>The following solvers support this initiative: <a href="https://gitlab.ow2.org/sat4j/sat4j/-/commit/4fb1c5c8fad0576db67a939fa007818c5414ab5e">Sat4j</a>.</p>
       <p>Thank you for supporting a welcoming community — every little improvement helps everyone do better! 🌱</p>
+    </section>
+
+    <section class="card">
+      <h2>About this initiative</h2>
+      <p>This web page is maintained by Daniel Le Berre. Contributions are welcome using either <a href="https://github.com/danielleberre/mysolvertimesout/issues">issues</a> or <a href="https://github.com/danielleberre/mysolvertimesout/pulls"></a>pull requests</a>. A <a href="https://github.com/danielleberre/mysolvertimesout/discussions">discussion space</a> is also available.</p>
+      <p>This initiative emerged from the discussions during the <a href="https://www.dagstuhl.de/en/seminars/seminar-calendar/seminar-details/25441">Dagstuhl Seminar 25441 on Competitions and Empirical Evaluations in Automated Reasoning</a>.
+      </p>
     </section>
   </div>
 </body>
