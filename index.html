@@ -167,6 +167,7 @@
       <h2>🧩 What to include with a contributed benchmark</h2>
       <ol>
         <li><strong>The instance file</strong> in the standard format for the community (examples below).</li>
+        <li><strong>Description</strong>, a brief description what the benchmarks is about, i.e., what it models, or even a link to paper or some other medium with more details</li>
         <li><strong>Minimal reproduction</strong>: the exact input you gave to the solver (no hidden preprocessing unless documented).</li>
         <li><strong>Solver invocation</strong>: command line, solver version, options, timeout, hardware used.</li>
         <li><strong>Observed behaviour</strong>: timeout, wrong result, crash, memory error, indefinite run.</li>
@@ -241,12 +242,11 @@ fof(conj, conjecture, (exists X: p(X))).
       <h2>✅ Practical checklist to attach to a submission</h2>
       <ul class="check">
         <li class="check-item"><strong>Instance file</strong> (in community format)</li>
-        <li class="check-item"><strong>Description</strong>, a brief description what the benchmarks is about, i.e., what it models, or even a link to paper or some other medium with more details</li>
+        <li class="check-item"><strong>Description</strong> (a short text or a link to a detailed description)</li>
         <li class="check-item"><strong>Solver command</strong> used</li>
         <li class="check-item"><strong>Timeout & machine</strong></li>
         <li class="check-item"><strong>Metadata</strong> (origin, license)</li>
-        <li class="check-item"><strong>Optional</strong>logs
-        </li>
+        <li class="check-item"><strong>Optional</strong> logs</li>
       </ul>
     </section>
 
@@ -267,7 +267,7 @@ Command: mysolver --timeout=600 my-instance.cnf
 Observed: TIMEOUT after 600s (no solution), no crash
 Expected: unknown (believed SAT)
 Metadata: tags: scheduling, hardware-bug; license: CC0; author: Alice
-Artifacts: solver.log (attached), model.witness (if found)
+Artifacts: solver.log (attached)
       </pre>
     </section>
 
