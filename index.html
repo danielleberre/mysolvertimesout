@@ -15,21 +15,21 @@
       --danger: #ff3b6f;
     }
     body.light-theme {
-      background: #ffe9ff;
+      background: #ffffff;
       color: #1a0033;
     }
     body.light-theme pre {
-      background: #fff0ff;
+      background: #ffffcf;
       color: #3a005a;
       border-color: rgba(0,0,0,0.15);
     }
     body.light-theme .card {
-      background: rgba(0,0,0,0.06);
-      border-color: rgba(0,0,0,0.08);
+      background: rgba(0,0,0,0.01);
+      border-color: rgba(0,0,0,0.01);
     }
     body.light-theme h2, body.light-theme h3 {
       text-shadow: none;
-      color: #5727c9;
+      color: #755ab4;
     }
     body {
       font-family: 'Inter', system-ui, sans-serif;
@@ -110,6 +110,10 @@
     .cta a.btn:hover {
       background: var(--secondary);
       color: #002629;
+    }
+    a {
+        color: #ff6af1;
+        text-decoration: none;
     }
   </style>
 <script>
@@ -278,11 +282,9 @@ Artifacts: solver.log (attached), model.witness (if found)
       <p>Consider adding a friendly message in your solver’s timeout logs or output, such as:</p>
       <pre>
 Timeout reached! 😅 This instance is a real thinker.
-Please consider contributing it to improve automated reasoning:
-<strong><a href="https://mysolvertimesout.org" style="color:var(--secondary);text-decoration:underline">mysolvertimesout.org</a></strong>
+Please consider contributing it to improve automated reasoning: <strong><a href="https://mysolvertimesout.org">mysolvertimesout.org</a></strong>
       </pre>
       <p>The following solvers support this initiative: <a href="https://gitlab.ow2.org/sat4j/sat4j/-/commit/4fb1c5c8fad0576db67a939fa007818c5414ab5e">Sat4j</a>.</p>
-      <p>Thank you for supporting a welcoming community — every little improvement helps everyone do better! 🌱</p>
     </section>
 
     <section class="card">
